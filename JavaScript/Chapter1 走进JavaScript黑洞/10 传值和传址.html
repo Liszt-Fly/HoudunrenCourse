@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //传值是复制操作
+    let a = 1
+    let b = a
+    a = 3
+    console.log(b);//a修改b并没有修改
+    //传引用是数据共用
+    let e = {}
+    let f = e
+    e.web = "houdunren"
+    console.log(f.web);//修改f，e发生变化，说明数据共用
+
+</script>
+
+</html>

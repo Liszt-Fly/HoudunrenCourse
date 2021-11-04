@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //const主要特性 不可修改（同一个作用域） 也具有TDC特性
+    const URL = "https://houdunren.com"
+    // URL = "abc"//不可修改
+    function show() {
+        const URL = "https://houdunren"
+    }
+    //const指的是内存地址不变
+    const CONFIG = {}
+    CONFIG.URL = "houdunren"//可以修改
+    console.log(CONFIG);
+</script>
+
+</html>

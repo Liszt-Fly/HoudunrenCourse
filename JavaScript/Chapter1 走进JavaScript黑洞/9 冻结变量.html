@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const HOST = {
+        url: "https://www.houdunren.com/api",
+        port: 443
+    }
+    Object.freeze(HOST)
+    HOST.port = 80 //用于引用类型，可以进行修改
+    console.log(HOST.port);//仍然是443，修改失败
+</script>
+
+</html>

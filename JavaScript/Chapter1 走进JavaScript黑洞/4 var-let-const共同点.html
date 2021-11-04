@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //函数当中可以访问到外部全局变量，无论var,let,const
+    var web = "houdunren.com"
+    function show() {
+        console.log(web);
+    }
+    show()
+    console.log(web);
+
+    var value = 1
+    function get() {
+        //私有领域定义的话就采用私有领域
+        var value = 3
+        console.log(value);
+    }
+    get()
+    console.log(value);
+</script>
+
+</html>
