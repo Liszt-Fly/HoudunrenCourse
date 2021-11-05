@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //短路运算
+    let a = 1, b = 0
+    if (a || b) {
+        console.log("houdunren");
+    }
+    let c = 6;
+    let f = c || b
+    console.log(f);//6
+    let n = 2;
+    let g = b || f
+    console.log(g);//
+    let sex = prompt("请输入性别") || "保密"
+    //不输入的时候，为假
+    console.log(sex);
+    //使用默认赋值也可以达到相同效果
+    function star(num) {
+        return "*".repeat(num || 5)
+    }
+    console.log(star());
+
+</script>
+
+</html>

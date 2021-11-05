@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="password" name="password">
+    <input type="password" name="confirm_password" id="">
+    <span name="msg"></span>
+</body>
+<script>
+    let a = 1, b = 1
+    if (a == 1 && b == 1) {
+        console.log("都为1");
+    }
+    else {
+        console.log("不都为1");
+    }
+
+    let inputs = document.querySelectorAll("[name='password'],[name='confirm_password']")
+    console.log(inputs);
+    [...inputs].map(item => {
+        item.addEventListener('keyup', function () {
+            if (query('password').value != query('confirm_password').value && query('confirm_password').value != "") {
+                msg = "两次密码不一致"
+            }
+            else {
+                msg = ""
+            }
+            query('msg').innerHTML = msg;
+        })
+    })
+
+    function query(name) {
+        return document.querySelector(`[name="${name}"]`)
+    }
+
+</script>
+
+</html>

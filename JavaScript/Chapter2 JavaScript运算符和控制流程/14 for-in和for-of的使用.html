@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    ul {
+        list-style: none;
+    }
+
+    li {
+        border: solid 1px #ddd;
+        height: 50px;
+        width: 200px;
+    }
+</style>
+
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+<script>
+    let hd = [
+        { title: "第一章 走进JavaScript黑洞", lesson: 3 },
+        { title: "ubuntu19.10 配置好用的工作站", lesson: 4 },
+        { title: "媒体查询响应布局", lesson: 8 }
+    ]
+
+    let houdunren = ['hdcms', "houdunren.com"]
+
+    for (let key in houdunren) {
+        console.log(houdunren[key]);
+    }
+    document.write(`<table border="1" width="100%"
+        <thead><tr><th>标题</th><th>课程数量</th></thead>
+    `)
+    for (let i in hd) {
+        document.write(`<tr><td>${hd[i].title}</td><td>${hd[i].lesson}<tr></`)
+    }
+
+    for (let key in window) {
+        console.log(key);
+    }
+    //forof处理可迭代对象
+    for (let v of houdunren) {
+        console.log(v);//取值
+    }
+
+    document.write(`<table border="1" width="100%"
+        <thead><tr><th>标题</th><th>课程数量</th></thead>
+    `)
+
+    //使用forof重现刚才的效果
+    for (let video of hd) {
+        document.write(`<tr><td>${video.title}</td><td>${video.lesson}<tr></`)
+    }
+
+    let lis = document.querySelectorAll('li')
+    for (const li of lis) {
+        li.addEventListener('click', function () {
+            li.style.backgroundColor = "red"
+        })
+    }
+</script>
+
+</html>

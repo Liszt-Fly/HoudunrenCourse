@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function table(option = { td: 5, tr: 5 }) {
+        document.write(`<table border="1" width="100%" `)
+
+        while (option.tr-- != 0) {
+            let td = option.td;
+            document.write(`<tr>`)
+            while (td-- != 0) {
+                document.write(`<td>${td}</td>`)
+            }
+            document.write(`</td>`)
+        }
+        document.write(`</table>`)
+    }
+    table({ tr: 3, td: 2 })
+</script>
+
+</html>

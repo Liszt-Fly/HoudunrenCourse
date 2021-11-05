@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //使用continue打印奇数行
+    // houdunren: for (let i = 1; i <= 10; i++) {
+    //     if (i % 2 == 0) {
+    //         continue houdunren
+    //     }
+    //     console.log(i);
+    // }
+
+    mike: for (let i = 1; i <= 10; i++) {
+        hdcms: for (let n = 1; n <= 10; n++) {
+            if (n % 2 == 0) {
+                console.log(i, n);
+            }
+            if (n + i > 10) {
+                //不打标签，退出当前循环，打标签，退出整个循环
+                break mike
+            }
+        }
+    }
+</script>
+
+</html>
