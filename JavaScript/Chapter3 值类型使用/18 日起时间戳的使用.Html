@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const date = new Date()
+    console.log(date);
+    console.log(typeof date);//object
+    console.log(date * 1);//秒数
+    const hd = Date()
+    console.log(hd);
+    console.log(typeof hd);//string
+    console.log(hd * 1);//NAN
+
+    const start = Date.now()
+
+
+    const end = Date.now()
+    const time = (end - start) / 1000
+    console.log(`${time}秒`);
+    //使用系统内置的时间戳
+    console.time("for")
+    for (let i = 0; i < 2000000000; i++) { }
+    console.timeEnd("for")
+    //使用ISO格式构建Date
+    const date1 = new Date("1990-9-22 3:22:18")
+    console.log(date1.getMonth());
+    //使用展开语法构建Date
+    const parm = [1990, 2, 22, 13, 22, 19]
+    const date2 = new Date(...parm)
+    console.log(date2.getFullYear());
+</script>
+
+</html>

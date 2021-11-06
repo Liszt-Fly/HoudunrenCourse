@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let hd = "houdunren.com"
+    //1个参数，为正数
+    console.log(hd.slice(0));//houdunren.com
+    console.log(hd.substring(0));//houdunren.com
+    console.log(hd.substr(0));//houdunren.com
+    //2个参数，为正数
+    console.log(hd.slice(1, 3));//ou
+    //substr的第二个参数含义是个数，另外两个是右边界线的截止点
+    console.log(hd.substr(1, 3));//oud
+    console.log(hd.substring(1, 3));//ou
+    //负数参数
+    console.log(hd.substr(-1));//从后面开始的第一个参数
+    console.log(hd.substring(-1));//负数无意义
+    console.log(hd.substr(-1, 3));//从后面开算，但是仍然正向截取
+</script>
+
+</html>

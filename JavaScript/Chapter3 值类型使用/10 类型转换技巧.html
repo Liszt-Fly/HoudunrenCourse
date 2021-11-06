@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const string = "99"
+    console.log(typeof string);
+    console.log(string * 78);//隐式转换
+    console.log(Number(string) + 88);//显式转换
+    const number = 66
+    console.log(String(number).repeat(5));//显式转换
+    console.log(parseInt(string));//如果是非数字，返回NAN
+    console.log(parseInt("yyusds"));//NAN
+    //字符串转换为数组
+    const cms = "hdcms"
+    console.log(cms.split("").length);
+    //数组转化为字符串
+    const array = ['hdcms', 'houdunren']
+    console.log(array.join("-"));
+</script>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const hd = "houdunren.com"
+    //如果不存在返回-1
+    console.log(hd.indexOf("o", 1));//第二个参数表示的是从第几位开始检索
+    console.log(hd.includes("h"));//true
+    console.log(hd.lastIndexOf("o"));//表示从后面往前面进行查找
+    console.log(hd.startsWith("h"));//是否以h开头
+    console.log(hd.endsWith("m"));//是否以m结束
+    //例子
+    const word = ['php', 'css']
+    const string = "我喜欢在后盾网学习php和css知识"
+    let status = word.some(word => {
+        return string.includes(word)
+    })
+    console.log(status);
+</script>
+
+</html>

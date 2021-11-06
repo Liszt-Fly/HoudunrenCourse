@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        li {
+            border: solid 1px #ddd;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        li>a {
+            color: green
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+<script>
+    let name = "后盾人"
+    let web = "houdunren.com"
+    console.log(tag`在线教程${name},网址是${web}`);
+    function tag(strings, ...vars) {
+        console.log(vars[0]);
+        return "a"
+    }
+
+    let lessons = [
+        { title: "媒体查询响应式布局", author: "后盾人向军" },
+        { title: "FLEX 弹性盒模型", author: "后盾人" },
+        { title: "GRID栅格系统", author: "后盾人" }
+    ]
+    function template() {
+        return `<ul>
+            ${lessons.map(item =>
+            links`<li>作者:${item.author},课程:${item.title}</li>`).join("")}
+            </ul>`
+    }
+    function links(strings, ...vars) {
+        return strings.map((str, key) => {
+            return str + (vars[key] ? vars[key].replace("后盾人", `<a href="http://www.baidu.com">后盾人</a>`) : "")
+
+        }).join("")
+    }
+    document.body.innerHTML = template()
+</script>
+
+</html>

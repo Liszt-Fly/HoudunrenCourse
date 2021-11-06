@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //最大值
+    console.log(Math.max(1, 2, 3, 4, 5));//5
+    let grade = [12, 3, 2, 124]
+    console.log(Math.max(...grade));//124
+    console.log(Math.max.apply(null, grade));//124
+    //向上取整和向下取整
+    console.log(Math.floor(5.0002));
+    console.log(Math.ceil(6.2));
+    //四舍五入
+    console.log((5.56).toFixed());
+</script>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const date = new Date("1996-8-12 08:22:12")
+    //转换为时间戳
+    console.log(date * 1);
+    console.log(Number(date));
+    console.log(date.valueOf());
+    console.log(date.getTime());
+    const timestamp = date.valueOf()
+    //时间戳回转
+    console.log(new Date(timestamp));
+</script>
+
+</html>

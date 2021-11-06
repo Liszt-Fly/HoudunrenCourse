@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //比较和转换是两种概念
+    const boolean = new Boolean(true)
+    console.log(typeof boolean);//object
+    //极简主义 字面量形式
+    let hd = true
+
+    console.log(typeof hd);//Boolean
+
+    let number = 99;//true
+    //对于数字来说 false 1 true 0 在进行比较的时候，布尔会转换成数值类型
+    console.log(number == true);//false
+    console.log(0 == false);
+    console.log(1 == true);
+    console.log(100 == true);//false
+    console.log(Boolean(number));//使用Boolean构造的时候，number>0转换出的值是true
+    if (number) {
+        console.log("ok");
+    }
+
+    let hds = "1"
+    console.log(hds == 1);//true
+    //数组转数字
+    let array = [1]
+    console.log(Number(array));
+    //引用类型转化为布尔对象为真,但是空的引用对象比较的时候为false
+    let a = [1]
+    console.log(Boolean(a));
+    console.log(a == true);//true
+
+</script>
+
+</html>

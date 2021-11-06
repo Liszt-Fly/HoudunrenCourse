@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="number">
+</body>
+<script>
+    //NaN Not a Number
+    console.log(Number("houdunren"));//NaN
+    console.log(2 / "houdunren");//NaN
+    console.log(NaN == NaN);//false //不能使用这种方式判断NAN
+    console.log(Number.isNaN(NaN));//true
+    console.log(Object.is(NaN, NaN));//true
+
+    let hd = '89'
+    console.log(Number(hd));
+    const number = document.querySelector("[name='number']").value = 99
+    console.log(typeof number);//string
+    console.log(number);
+
+    let m = "89.78sdsdsds"//以数字开头可以取到
+    console.log(parseFloat(m));//89.78
+    let array = [1]//只有一个数字的是可以转化，多于一个将会返回NaN
+    console.log(Number(array));//1
+
+</script>
+
+</html>

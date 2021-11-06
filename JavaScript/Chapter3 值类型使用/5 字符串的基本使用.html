@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <input type="password" name="password" id="">
+    <span></span>
+    <hr>
+    <span id="text-effect"></span>
+</body>
+<script>
+    let name = "houdunren"
+
+    console.log(name.length);
+    console.log(name.toUpperCase());
+    console.log(name.toLowerCase());
+    let ps = document.querySelector('[name="password"]')
+    ps.addEventListener('keyup', function () {
+        this.value = this.value.trim()
+        let span = document.getElementsByTagName("span")
+        if (this.value.length < 5) {
+
+            span[0].innerHTML = "密码不能小于5位"
+        }
+        else {
+            span[0].innerHTML = ""
+        }
+    })
+
+    let hd = "houdunren"
+    console.log(hd.charAt(0));//h
+    console.log(hd[0]);//h
+    let textBlock = document.querySelector('#text-effect')
+    for (let i = 0; i < hd.length; i++) {
+
+        let sp = document.createElement('span')
+        sp.style.fontSize = (i + 1) * 10 + "px"
+        sp.innerHTML = hd[i]
+        document.body.append(sp)
+
+    }
+</script>
+
+</html>
