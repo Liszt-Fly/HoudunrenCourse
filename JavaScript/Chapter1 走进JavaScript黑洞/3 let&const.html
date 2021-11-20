@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
-</body>
-<script>
+  <body></body>
+  <script>
+    {
+      var a = 1
+    }
+    console.log(a)
     //let必须先声明，再使用，否则报错
     // console.log(web);//Can not access "web" before initialization
     //形成了暂时性死区TDC
     let web = "houdunren.com"
     //如果这个区域没有定义，往上级找，如果定义了，就必须在使用的前面，不然报错
     function func() {
-        console.log(web);
-        // let web = "houdunren"
+      console.log(web)
+      // let web = "houdunren"
     }
     func()
-    function run(a = 3, b = a) { }
+    function run(a = 3, b = a) {}
     run()
-</script>
-
+    console.log(q)
+    var q = 99
+  </script>
 </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let arr = [1, 5, 3, 9, 7]
+    arr = arr.sort(function (a, b) {
+      return a - b //字母顺序的话是升序 b-a降序
+    })
+    console.log(arr)
+
+    let cart = [
+      { name: "iphone", price: 120000 },
+      {
+        name: "imac",
+        price: 180000,
+      },
+      {
+        name: "ipad",
+        price: 3200,
+      },
+    ]
+    cart = cart.sort(function (a, b) {
+      return b.price - a.price
+    })
+    console.table(cart)
+  </script>
+</html>

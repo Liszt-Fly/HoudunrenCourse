@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let arr = ["hdcms", "houdunren"]
+    let keys = arr.values()
+    let entries = arr.entries()
+    let values = arr.values()
+    // let { value, done } = keys.next()
+    // console.log(value, done)
+    // for (const value of arr.keys()) {
+    //   console.log(value) //0,1
+    // }
+    for (const value of arr.values()) {
+      console.log(value) //hdcms,houdunren
+    }
+    for (const [key, value] of arr.entries()) {
+      console.log(key, value)
+    }
+  </script>
+</html>

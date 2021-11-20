@@ -1,3 +1,3 @@
-function show() {
-    web = "HELLO,WORLD"
+function init() {
+    version = "1.0"
 }

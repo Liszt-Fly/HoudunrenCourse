@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let arr = [1, 2, 3, 4, 5]
+    let hd = arr.slice(1, 2) //左闭右开
+    console.log(hd)
+    console.log(arr)
+    let hd1 = arr.splice(1, 2) //第二位数表示的是截取个数
+    console.log(hd1)
+    console.log(arr) //原数组被改变
+    //移除第二个元素添加元素（替换）
+    let arr2 = [1, 2, 3, 4, 5]
+    arr2.splice(1, 1, "后盾人")
+    console.log(arr2)
+    //增加元素
+    arr2.splice(1, 0, "houdunren")
+    console.table(arr2)
+    //向末尾增加
+    arr2.splice(arr2.length, 0, "后盾人")
+    console.log(arr2)
+  </script>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body></body>
+  <script>
+    //放在变量位置进行吸收，放在赋值位置进行展开
+    let arr = ["后盾人", 2010]
+    let [name, year] = arr
+    console.log(name)
+    console.log(year)
+    const [...string] = "hdcms"
+    console.log(string)
+    //默认值
+    let [name1, year1 = 2010] = ["后盾人"]
+    console.log(name1)
+    console.log(year1)
+  </script>
+</html>

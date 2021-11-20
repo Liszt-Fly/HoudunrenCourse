@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .disable {
+      text-decoration: line-through;
+    }
+  </style>
+  <body>
+    <ul>
+      <li>hdcms</li>
+      <li>houdunren</li>
+    </ul>
+  </body>
+  <script>
+    let lessons = [
+      { title: "媒体查询响应式布局", category: "css" },
+      { title: "FLEX 弹性盒模型", category: "css" },
+      { title: "MYSQL多表查询操作", category: "mysql" },
+    ]
+
+    lessons.forEach(function (item, index, lessons) {
+      item.title = item.title.substr(0, 2)
+    })
+    console.table(lessons)
+    let lis = document.querySelectorAll("ul li")
+    console.log(lis)
+    //forEach可以直接操作NodeList不需要转化为数组
+    lis.forEach(function (item) {
+      item.addEventListener("click", function () {
+        this.classList.toggle("disable")
+      })
+    })
+  </script>
+</html>

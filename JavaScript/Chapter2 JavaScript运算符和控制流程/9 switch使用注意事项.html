@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
-</body>
-<script>
+  <body></body>
+  <script>
     let name = "视频"
     switch (name) {
-        case "产品":
-            console.log("hdcms.com");
-            break
-        case "视频":
-            console.log("houdunren.com");
-            break
-        default:
-            console.log("houdunwang.com");
+      case "产品":
+        console.log("hdcms.com")
+        break
+      case "视频":
+        console.log("houdunren.com")
+        break
+      default:
+        console.log("houdunwang.com")
     }
 
     //无论switch还是case都可以使用expression
     function message(age) {
-        switch (age > 60) {
-            case age > 80:
-                console.log("符合条件");
-                break
-            case age < 40:
-                console.log("不符合条件");
-        }
+      switch (age > 60) {
+        case age > 80:
+          console.log("符合条件")
+          break
+        case age < 40:
+          console.log("不符合条件")
+          break
+          break
+        default:
+          console.log("输入不合法")
+          break
+      }
     }
-    message(82)
-</script>
-
+    message(72)
+  </script>
 </html>

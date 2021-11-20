@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>hdcms</div>
+    <div>houdunren</div>
+</body>
+<script>
+    //数组转字符串
+    let arr = [1, 3, 4]
+    console.log(String(arr));
+    console.log(arr.join(","));
+    //字符串转换为数组
+    let str = "hdcms"
+    console.log(str.split(""));
+    //元素具有length属性都可以使用from方法转换
+    console.log(Array.from(str));
+    //对象使用数字索引，具有length属性的时候也可以使用from方法
+    let obj = {
+        0: "hdcms",
+        1: "houdunren",
+        length: 2
+    }
+    console.log(Array.from(obj));
+    const divs = document.querySelectorAll("div")
+    console.log(Array.from(divs, function (item) {
+        item.style.backgroundColor = "red"
+        return item
+    }));
+</script>
+
+</html>

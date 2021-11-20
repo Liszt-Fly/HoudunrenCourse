@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let lessons = [
+      { title: "媒体查询响应式布局", category: "css" },
+      { title: "FLEX 弹性盒模型", category: "css" },
+      { title: "MYSQL多表查询操作", category: "mysql" },
+    ]
+
+    for (let i = 0; i < lessons.length; i++) {
+      lessons[i].title = `后盾人${lessons[i].title}`
+    }
+    console.table(lessons)
+    let arr = [1, 2, 3]
+    //forof和forin有区别 对于基本类型来说 forin是操作地址，forof操作的值，可复制可粘贴
+    for (let value of arr) {
+      value += 10
+    }
+    console.table(arr) //值类型不会改变
+    //引用类型发生影响
+    for (const value of lessons) {
+      value.title = value.title.concat("!")
+    }
+    console.table(lessons)
+  </script>
+</html>

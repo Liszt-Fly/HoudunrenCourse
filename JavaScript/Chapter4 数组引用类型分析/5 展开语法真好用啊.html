@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let arr = ["hdcms", "houdunren"]
+    let hd = ["js", "css"]
+    for (const value of hd) {
+        arr.push(value)
+    }
+    console.log(arr);
+    //点语法的使用
+    arr = [...arr, ...hd]
+    console.log(arr);
+    //求和函数
+    function sum(...args) {
+        return args.reduce((s, v) => {
+            return s + v
+        }, 0)
+    }
+    console.log(sum(1, 2, 3, 4, 5));
+</script>
+
+</html>

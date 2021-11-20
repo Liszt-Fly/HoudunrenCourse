@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const array = new Array("hdcms", "houdunren", 1, 2, 3, 4, 5)
+    //使用table查看更加清晰
+    console.table(array)
+    console.log(typeof array);//object
+    const array1 = [1, 2, 3, 4, 5]
+    console.log(typeof array1);//object
+
+    let hd = array
+    hd[0] = "HELLO"
+    console.log(array[0]);//同时更改，引用类型的性质，共用而非复制
+</script>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let arr = [1, 2, 3, 4, 5]
+    let res = arr.find(function (item) {
+      return item == 2
+    })
+    console.log(res) //find方法返回的是值，如果未找到，返回的是undefined
+    let lessons = [{ name: "js" }, { name: "css" }, { name: "mysql" }]
+    console.log(lessons.includes({ name: "css" })) //不相等，引用类型
+    let a = {}
+    let b = {}
+    console.log(a == b) //false 内存地址不同
+    //使用find进行查找
+    let res1 = lessons.find(function (item) {
+      return item.name == "css"
+    })
+    console.log(res1) //查找到， 非常适合用于查找引用类型
+
+    let index = lessons.findIndex(function (item) {
+      return item.name == "css"
+    })
+    console.log(index) //1
+  </script>
+</html>

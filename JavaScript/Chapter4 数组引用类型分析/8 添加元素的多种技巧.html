@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let array = ["hdcms", "houdunren"]
+    console.log(array[1])
+    //使用数组长度进行追加
+    array[array.length] = "shop"
+    console.table(array)
+    let hd = ["test", "thinkng"]
+    array = [...array, ...hd]
+    console.table(array)
+    array.push("ok")
+    console.table(array)
+    array.push("cms", ...hd)
+    console.table(array)
+
+    function rangeArray(begin, end) {
+      const array = []
+      for (let i = begin; i < end; i++) {
+        array.push(i)
+      }
+      return array
+    }
+    console.table(rangeArray(1, 10))
+  </script>
+</html>
