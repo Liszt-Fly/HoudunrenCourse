@@ -1,0 +1,50 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+{
+    //装饰器工厂
+    const MusicDecoratorFactory = (type) => {
+        switch (type) {
+            case "Tank":
+                return (target) => {
+                    target.prototype.playMusic = () => {
+                        console.log("播放战争音乐");
+                    };
+                };
+            case "Player":
+                return (target) => {
+                    target.prototype.playMusic = () => {
+                        console.log("播放喜羊羊音乐");
+                    };
+                };
+            default:
+                return (target) => {
+                    console.log("未知情况，请重新处理");
+                };
+        }
+    };
+    let Tank = /** @class */ (() => {
+        let Tank = class Tank {
+        };
+        Tank = __decorate([
+            MusicDecoratorFactory("Tank")
+        ], Tank);
+        return Tank;
+    })();
+    const t = new Tank();
+    t.playMusic();
+    let Player = /** @class */ (() => {
+        let Player = class Player {
+        };
+        Player = __decorate([
+            MusicDecoratorFactory("Player")
+        ], Player);
+        return Player;
+    })();
+    const p = new Player();
+    p.playMusic();
+}

@@ -1,3 +1,4 @@
+"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7,12 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 {
     //在tsconfig.json中开启装饰器特性
     function decorator(target) { }
-    var Hd = /** @class */ (function () {
-        function Hd() {
-        }
-        Hd = __decorate([
-            decorator
-        ], Hd);
-        return Hd;
-    }());
+    let Hd = class Hd {
+    };
+    Hd = __decorate([
+        decorator
+    ], Hd);
 }
